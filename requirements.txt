@@ -3,3 +3,5 @@ requests
 BeautifulSoup4
 werkzeug
 flask_login
+imgurpython
+pyimgur
