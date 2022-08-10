@@ -1,4 +1,3 @@
-from encodings import utf_8
 from flask import *
 from werkzeug.utils import *
 import flask_login
