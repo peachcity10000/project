@@ -8,7 +8,7 @@
     {%block main%}
     <div id="blockA" style=" height: 100vh;">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
-        <div class="container mainCarousel" style="background-color: rgb(235, 235, 179);">
+        <div class="container-fluid mainCarousel">
             <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
 
                 <!-- indicators -->
@@ -51,18 +51,12 @@
     </div>
 
     <div id="blockB">
+        <div class="photo">
+            <img src="{{ url_for('static', filename='img/blockB_img.jpg')}}" alt="" srcset="">
+        </div>
 
-        <div class="container" style="background-color: #EFDEC8; height: 90vh;">
-            <div class="row">
-                <div class="col-sm-8">
-                    <img src="{{ url_for('static', filename='img/blockB_img.jpg')}}" alt="" srcset="">
-                </div>
-
-                <div class="col-sm-4">
-                    <p>歡迎來到桃城万事屋<br>這裡提供您最優質的嘉義咖啡店情報<br>以及在嘉義走跳的各種趣事</p>
-                </div>
-
-            </div>
+        <div class="text">
+            <p>歡迎來到桃城万事屋<br><br>這裡提供您最優質的嘉義咖啡店情報<br><br>以及在嘉義走跳的各種趣事</p>
         </div>
     </div>
 

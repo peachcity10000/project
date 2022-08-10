@@ -19,13 +19,16 @@
 
     <!-- css -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css')}}">
+
+    <!-- javascript -->
+    <script src="{{ url_for('static', filename='js/nav.js')}}"></script>
 </head>
 
 <body>
     <nav class="navbar sticky-top navbar-expand-lg nav_style">
         <div class="container-fluid">
             <img src="{{ url_for('static', filename='img/title.jpg')}}" style="max-height: 40px; padding-right: 24px;" alt="">
-            <a class="navbar-brand nav_title" href="/">桃 城 万 事 屋</a>
+            <a class="navbar-brand nav_title" id="nav_title" href="/">桃 城 万 事 屋</a>
             <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -36,7 +39,7 @@
                         <a class="nav-link active" aria-current="page" href="#blockA">Home</a>
                     </li>
                     <li class="nav-item nav_items">
-                        <a class="nav-link" href="#blockB">About</a>
+                        <a class="nav-link" href="#blockB" onclick="navTitleColor('#blockB')">About</a>
                     </li>
                     <li class="nav-item nav_items">
                         <a class="nav-link" href="/Map">Map</a>

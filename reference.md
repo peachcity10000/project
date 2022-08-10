@@ -28,3 +28,5 @@
 - upload file 1 : https://www.tw511.com/5/56/1745.html
 - upload file 2 : https://medium.com/@charming_rust_oyster_221/flask-%E6%AA%94%E6%A1%88%E4%B8%8A%E5%82%B3%E5%88%B0%E4%BC%BA%E6%9C%8D%E5%99%A8%E7%9A%84%E6%96%B9%E6%B3%95-1-c11097c23137
 - upload to imgur : https://www.letswrite.tw/imgur-api-upload-load/
+- bootstrap 轮播图显示多张图片 : https://blog.csdn.net/qq_39313596/article/details/81136470
+- css 文字超過不換行 : https://www.puritys.me/docs-blog/article-31-CSS-%E8%AA%9E%E6%B3%95%EF%BC%8C%E6%96%87%E5%AD%97%E6%8F%9B%E8%A1%8C%EF%BC%8C%E5%BC%B7%E8%BF%AB%E4%B8%8D%E6%8F%9B%E8%A1%8C%E3%80%82.html
