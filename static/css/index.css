@@ -6,15 +6,9 @@
 }
 
 .main_title {
-    /* display: inline;
-    position: absolute;
-    font-size: 40px;
-    right: 30vh;
-    top: 60vh;
-    font-family: 'Noto Sans TC'; */
     position: absolute;
     bottom: 40vh;
-    right: 30vw;
+    right: 25vw;
     display: inline;
     font-size: 40px;
     font-family: 'Noto Sans TC';
