@@ -1,0 +1,40 @@
+/* font setting */
+
+@font-face {
+    font-family: 'Noto Sans TC';
+    src: url(/font/SourceHanSerifTC-Bold.otf);
+}
+
+.main_title {
+    /* display: inline;
+    position: absolute;
+    font-size: 40px;
+    right: 30vh;
+    top: 60vh;
+    font-family: 'Noto Sans TC'; */
+    position: absolute;
+    bottom: 40vh;
+    right: 30vw;
+    display: inline;
+    font-size: 40px;
+    font-family: 'Noto Sans TC';
+}
+
+.main_subtitle {
+    font-size: 26px;
+    padding-left: 20vw;
+    padding-top: 5vw;
+    font-family: 'Noto Sans TC';
+}
+
+#blockB img {
+    width: 50vw;
+    height: 90vh;
+    overflow: hidden;
+}
+
+#blockB p {
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    font-family: 'Noto Sans TC';
+}

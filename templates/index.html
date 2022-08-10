@@ -1,0 +1,70 @@
+{% extends "nav.html" %} {% block title %}桃城万事屋{% endblock %}
+
+<!-- css -->
+
+
+
+<main>
+    {%block main%}
+    <div id="blockA" style=" height: 100vh;">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
+        <div class="container mainCarousel" style="background-color: rgb(235, 235, 179);">
+            <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
+
+                <!-- indicators -->
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#homeCarousel" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#homeCarousel" data-bs-slide-to="2"></li>
+                </ol>
+
+                <!-- inner -->
+                <div class="carousel-inner" style="text-align: center;">
+                    <div class="carousel-item active ">
+                        <img src="{{ url_for('static', filename='img/example1.png')}}" style=" margin-right: 10%;" class="b-block w-50 " alt="">
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="{{ url_for('static', filename='img/example1.png')}}" style=" margin-right: 10%;" class="b-block w-50 " alt="">
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="{{ url_for('static', filename='img/example1.png')}}" style=" margin-right: 10%;" class="b-block w-50 " alt="">
+                    </div>
+                </div>
+
+                <!-- prev -->
+                <a class="carousel-control-prev" href="#homeCarousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+
+                <!-- next -->
+                <a class="carousel-control-next" href="#homeCarousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+            <p class="main_title">桃<br>城</p>
+
+        </div>
+        <p class="main_subtitle">CHIAYI CAFE</p>
+
+    </div>
+
+    <div id="blockB">
+
+        <div class="container" style="background-color: #EFDEC8; height: 90vh;">
+            <div class="row">
+                <div class="col-sm-8">
+                    <img src="{{ url_for('static', filename='img/blockB_img.jpg')}}" alt="" srcset="">
+                </div>
+
+                <div class="col-sm-4">
+                    <p>歡迎來到桃城万事屋<br>這裡提供您最優質的嘉義咖啡店情報<br>以及在嘉義走跳的各種趣事</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    {%endblock%}
+</main>
