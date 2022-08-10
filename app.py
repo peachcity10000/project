@@ -2,7 +2,7 @@ from flask import *
 from werkzeug.utils import *
 import flask_login
 import os
-from sqlProcess import *
+from py.sqlProcess import *
 
 UPLOAD_FOLDER = './static/temp/'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
