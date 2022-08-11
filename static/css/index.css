@@ -10,9 +10,12 @@
 
 #blockA {
     background-color: #F5F5F5;
+    height: 100vh;
+    overflow: hidden;
+    object-fit: cover;
 }
 
-.main_title {
+#blockA .main_title {
     position: absolute;
     bottom: 30vh;
     right: 25vw;
@@ -21,11 +24,17 @@
     font-family: 'Noto Sans TC';
 }
 
-.main_subtitle {
+#blockA .main_subtitle {
     font-size: 26px;
     padding-left: 20vw;
     padding-top: 5vw;
     font-family: 'Noto Sans TC';
+}
+
+#blockA img {
+    height: 60vh;
+    overflow: hidden;
+    object-fit: cover;
 }
 
 
