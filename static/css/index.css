@@ -3,6 +3,8 @@
     background-color: #EFDEC8;
     padding: 5px;
     margin: 5px;
+    text-align: center;
+    overflow-x: scroll;
 }
 
 .content svg {
