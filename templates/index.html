@@ -1,13 +1,18 @@
 {% extends "nav.html" %} {% block title %}桃城万事屋{% endblock %}
 
-<!-- css -->
 
 
 
 <main>
     {%block main%}
     <div id="blockA" style=" height: 100vh;">
+        <!-- css -->
         <link rel="stylesheet" href="{{ url_for('static', filename='css/sectionA.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
+
+        <!-- javascript -->
+        <script src="{{ url_for('static', filename='js/index.js')}}"></script>
+
         <div class="container-fluid mainCarousel">
             <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
 
@@ -62,18 +67,21 @@
 
 
     <div id="blockC">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
         <div class="content">
             <form action="submit" id="submition">
                 <img src="{{url_for('static',filename='img/search.png')}}" alt="">
                 <input type="text">
             </form>
             <div id="resize">
-                <button class="zoom_in">+</button> <br>
+                <button class="zoom_in" onclick="zoomingByButton(20)">+</button> <br>
                 <hr>
-                <button class="zoom_out">-</button>
+                <button class="zoom_out" onclick="zoomingByButton(-20)">-</button>
             </div>
-            <embed src="{{url_for('static',filename='svg/map.svg')}}" type="image/svg+xml" />
+            <div class="mapp" onmousewheel="return bbing()">
+                <embed src="{{url_for('static',filename='svg/map.svg')}}" type="image/svg+xml" id="svg5" />
+                <!-- <a href="{{url_for('static',filename='svg/map.svg')}}">查看 SVG 文件</a> -->
+                <!-- <iframe src="{{url_for('static',filename='svg/map.svg')}}" id="svg5"></iframe> -->
+            </div>
         </div>
 
     </div>
@@ -93,6 +101,7 @@
         </div>
     </div>
 
+    <!-- the max len of item context : 50 -->
     <div id="blockCafe">
         <div class="title">
             <p>Cafe</p>
@@ -145,6 +154,8 @@
             </div>
         </div>
     </div>
+
+
     <div id="blockContact">
         <div id="title">
             <p>Contact us</p>

@@ -5,6 +5,8 @@
     margin: 5px;
     text-align: center;
     overflow-x: scroll;
+    overflow-y: scroll;
+    max-height: 100vh;
 }
 
 .content svg {
@@ -15,6 +17,7 @@
     position: absolute;
     padding: 10px 0 0 10px;
     height: 3vh;
+    padding: 0;
 }
 
 #submition input {
