@@ -23,8 +23,16 @@ function zoomingByButton(num) {
     return false;
 }
 
-function slideIn() {
+function slideOut() {
     var fixedBlock = document.querySelector('.fixedBlock');
     fixedBlock.style.width = "100%";
-    var slideBlock = document.querySelector()
+    var slideBlock = document.querySelector('.slideBlock');
+    slideBlock.style.width = "0%";
+}
+
+function slideIn() {
+    var fixedBlock = document.querySelector('.fixedBlock');
+    fixedBlock.style.width = "75%";
+    var slideBlock = document.querySelector('.slideBlock');
+    slideBlock.style.width = "24%";
 }

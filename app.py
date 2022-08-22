@@ -61,6 +61,13 @@ def ttf(path):
         environ = request.environ
     )
 
+@app.route("/<path:path>")
+def indexjs(path):
+    return send_from_directory(directory='./js/',
+    path=path,
+    as_attachment = True,
+    environ=request.environ
+    )
 
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))

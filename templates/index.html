@@ -10,8 +10,13 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='css/sectionA.css')}}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
 
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
         <!-- javascript -->
         <script src="{{ url_for('static', filename='js/index.js')}}"></script>
+        <script src="{{ url_for('static', filename='js/initial.js')}}"></script>
+
 
         <div class="container-fluid mainCarousel">
             <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -79,15 +84,15 @@
                         <hr>
                         <button class="zoom_out" onclick="zoomingByButton(-20)">-</button>
                     </div>
-                    <div class="mapp" onmousewheel="return bbing()">
-                        <embed src="{{url_for('static',filename='svg/map.svg')}}" type="image/svg+xml" id="svg5" />
+                    <div class="mapp">
+                        <embed src="{{url_for('static',filename='svg/map.svg')}}" type="image/svg+xml" id="svg5" onmousewheel="return bbing()" />
                         <!-- <object data="{{url_for('static',filename='svg/map.svg')}}" type="image/svg+xml" id="svg5"></object> -->
                         <!-- <img src="{{url_for('static',filename='svg/map.svg')}}" alt="" id="svg5"> -->
                     </div>
                 </div>
             </div>
             <div class="slideBlock">
-                <p id="closeButton">X</p>
+                <p id="closeButton" onclick="slideOut()">X</p>
                 <p class="sildeTitle">小口品S</p>
                 <p class="imgBlock">HI</p>
                 <div class="infoBlock">
