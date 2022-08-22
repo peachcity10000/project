@@ -22,3 +22,9 @@ function zoomingByButton(num) {
     if (zoom > 0) svgImage.style.zoom = zoom + "%";
     return false;
 }
+
+function slideIn() {
+    var fixedBlock = document.querySelector('.fixedBlock');
+    fixedBlock.style.width = "100%";
+    var slideBlock = document.querySelector()
+}
