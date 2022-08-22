@@ -32,7 +32,7 @@ function slideOut() {
 
 function slideIn() {
     var fixedBlock = document.querySelector('.fixedBlock');
-    fixedBlock.style.width = "75%";
+    fixedBlock.style.width = "70%";
     var slideBlock = document.querySelector('.slideBlock');
-    slideBlock.style.width = "24%";
+    slideBlock.style.width = "29%";
 }

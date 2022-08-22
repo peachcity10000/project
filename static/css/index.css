@@ -69,13 +69,36 @@
 
 .imgBlock {
     height: 45vh;
-    overflow-y: scroll;
+    overflow-y: auto;
     background-color: rgb(173, 204, 62);
+    margin: 0 5px 0 5px;
 }
 
 .infoBlock {
-    overflow-y: scroll;
+    overflow-y: auto;
     max-height: 40vh;
+    margin: 10px 5px 0 5px;
+}
+
+.infoBlock>.slideContent {
+    margin: 0;
+}
+
+.infoBlock>.slideSubtitle {
+    margin: 0;
+}
+
+.infoBlock>hr {
+    padding: 0 10px 0 10px;
+    margin: 0px 0 10px 0;
+}
+
+.infoBlock>.sildeTitle {
+    text-decoration: none;
+}
+
+.infoBlock>.sildeTitle:hover {
+    text-decoration: underline;
 }
 
 
