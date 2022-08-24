@@ -120,5 +120,21 @@ class peachDB:
         return 
 
     def close_sql(self):
-        self.db_conn.close()
+        if(self.connected == True):
+            self.db_conn.close()
+        self.connected = False
+
+    def get_html_id_info(self, html_id:str):
+        verification_code  = html_id.split('-')[0]
+        if (verification_code!= 'g16913'):
+            return "error"
+        
+        command = f'SELECT * from store where store_html_id = "{html_id}";'
+        if (self.connected ==False):
+            self.connection()
+        self.cursor.execute(command)
+        self.db_conn.commit()
+        row = list(self.cursor.fetchall())
+        return row[0]
+
 

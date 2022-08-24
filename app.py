@@ -65,30 +65,22 @@ def indexjs(path):
 
 @app.route('/get_info',methods=['GET','POST'])
 def query_info():
-    return """
-    {
-    "glossary": {
-        "title": "example glossary",
-		"GlossDiv": {
-            "title": "S",
-			"GlossList": {
-                "GlossEntry": {
-                    "ID": "SGML",
-					"SortAs": "SGML",
-					"GlossTerm": "Standard Generalized Markup Language",
-					"Acronym": "SGML",
-					"Abbrev": "ISO 8879:1986",
-					"GlossDef": {
-                        "para": "A meta-markup language, used to create markup languages such as DocBook.",
-						"GlossSeeAlso": ["GML", "XML"]
-                    },
-					"GlossSee": "markup"
-                }
-            }
-        }
-    }
-}
-    """
+    html_id = request.get_data()
+    db = peachDB()
+    result = db.get_html_id_info((html_id).decode('ascii'))
+    db.close_sql()    
+    if(result!="error"):
+        text = f'''
+            "store_name" : "{result[1]}",
+            "store_phone" : "{result[4]}",
+            "store_web" : "{result[5]}"
+        '''
+        return "{" + text + "}"
+    else:
+        return '{"error":"error"}'
+
+
+
 
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))

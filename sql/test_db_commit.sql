@@ -12,7 +12,7 @@ INSERT INTO
     store(store_name, store_html_id, store_date, store_tel, store_web)
 values
     (
-        "7-11",
+        "小口品S",
         "g16913-26-3-51-5-18-54-70-6-4-2",
         '1659268899.2852724',
         '0912345678',

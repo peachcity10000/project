@@ -1,6 +1,8 @@
 import sqlite3
 import os
 
+from click import command
+
 def create_sql():
     with open('./sql/create_db.sql',newline='') as f:
         create_db_sql = f.read()
@@ -35,7 +37,7 @@ def test_sql():
         print(row)
 
     # Test selecting the "store" table
-    c.execute("SELECT * FROM store where store_name = '7-11';")
+    c.execute("SELECT * FROM store where store_name = '小口品S';")
     db.commit()
     for row in c:
         print(row)
@@ -76,3 +78,21 @@ test_sql()
 delete_sql()
 create_sql()
 print("test successfully")
+
+
+# command = """
+# INSERT INTO 
+#     store(store_name, store_html_id, store_date, store_tel, store_web)
+# values
+#     (
+#         "小口品S",
+#         "g16913-26-3-51-5-18-54-70-6-4-2",
+#         '1659268899.2852724',
+#         '0912345678',
+#         'https://www.facebook.com/xiaokoupin/'
+#     );
+#     """
+# db = sqlite3.connect('peachCity.db')
+# c = db.cursor()
+# c.execute(command)
+# c.close()
