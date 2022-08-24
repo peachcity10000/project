@@ -31,6 +31,14 @@ function slideOut() {
 }
 
 function slideIn(positionId) {
+    if (positionId === undefined) {
+        var slide_title = document.querySelector('.sildeTitle');
+        var slide_phone = document.querySelector('#slidePhone');
+        var slide_web = document.querySelector('#slideWeb');
+        slide_title.textContent = "尚未收錄";
+        slide_phone.textContent = "尚未收錄";
+        slide_web.textContent = "尚未收錄";
+    }
     fetch('./get_info', {
             method: 'post',
             body: positionId,
@@ -39,10 +47,7 @@ function slideIn(positionId) {
             return response.json();
         })
         .then(json => {
-            var fixedBlock = document.querySelector('.fixedBlock');
-            fixedBlock.style.width = "70%";
-            var slideBlock = document.querySelector('.slideBlock');
-            slideBlock.style.width = "29%";
+
             JSON.parse(JSON.stringify(json), function(key, value) {
                 var slide_title = document.querySelector('.sildeTitle');
                 var slide_phone = document.querySelector('#slidePhone');
@@ -54,4 +59,8 @@ function slideIn(positionId) {
             })
             return json
         })
+    var fixedBlock = document.querySelector('.fixedBlock');
+    fixedBlock.style.width = "70%";
+    var slideBlock = document.querySelector('.slideBlock');
+    slideBlock.style.width = "29%";
 }
