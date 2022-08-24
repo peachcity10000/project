@@ -20,14 +20,7 @@ def allowed_file(filename):
 
 @app.route("/")
 def index():
-    db = peachDB()
-    re = db.select_photoText()
-    db.close_sql()
-    return render_template('index.html',
-    photo_text_title = re[0],
-    photo_text_context = re[1],
-    photo_text_photoAddr = re[2]
-    )
+    return render_template('index.html')
 
 
 @app.route("/Map")
@@ -68,6 +61,34 @@ def indexjs(path):
     as_attachment = True,
     environ=request.environ
     )
+
+
+@app.route('/get_info',methods=['GET','POST'])
+def query_info():
+    return """
+    {
+    "glossary": {
+        "title": "example glossary",
+		"GlossDiv": {
+            "title": "S",
+			"GlossList": {
+                "GlossEntry": {
+                    "ID": "SGML",
+					"SortAs": "SGML",
+					"GlossTerm": "Standard Generalized Markup Language",
+					"Acronym": "SGML",
+					"Abbrev": "ISO 8879:1986",
+					"GlossDef": {
+                        "para": "A meta-markup language, used to create markup languages such as DocBook.",
+						"GlossSeeAlso": ["GML", "XML"]
+                    },
+					"GlossSee": "markup"
+                }
+            }
+        }
+    }
+}
+    """
 
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))

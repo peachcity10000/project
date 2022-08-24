@@ -30,7 +30,16 @@ function slideOut() {
     slideBlock.style.width = "0%";
 }
 
-function slideIn() {
+function slideIn(positionId) {
+    var data;
+    fetch('./get_info', {
+            method: 'post',
+            body: positionId,
+        })
+        .then((response) => {
+            data = response.text()
+        })
+    alert(data)
     var fixedBlock = document.querySelector('.fixedBlock');
     fixedBlock.style.width = "70%";
     var slideBlock = document.querySelector('.slideBlock');

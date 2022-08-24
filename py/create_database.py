@@ -1,4 +1,5 @@
 import sqlite3
+import os
 
 def create_sql():
     with open('./sql/create_db.sql',newline='') as f:
@@ -33,6 +34,25 @@ def test_sql():
     for row in c:
         print(row)
 
+    # Test selecting the "store" table
+    c.execute("SELECT * FROM store where store_name = '7-11';")
+    db.commit()
+    for row in c:
+        print(row)
+    
+    # Test selecting the "img" table
+    c.execute("SELECT * FROM img where store_id = 1;")
+    db.commit()
+    for row in c:
+        print(row)
+
+    # Test selecting the "postcast" table
+    c.execute("SELECT * FROM postcast where store_id = 1;")
+    db.commit()
+    for row in c:
+        print(row)
+    
+
     
 def delete_sql():
     db = sqlite3.connect('peachCity.db')
@@ -41,9 +61,18 @@ def delete_sql():
         test_db_sql = f.read()
         c.executescript(test_db_sql)
         db.commit()
+    db.close()
+    try:
+        os.remove('./peachCity.db')
+    except OSError as e:
+        print(e)
+    else:
+        print("File is deleted successfully")
+
 
 
 create_sql()
 test_sql()
 delete_sql()
 create_sql()
+print("test successfully")
