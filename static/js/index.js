@@ -46,6 +46,8 @@ function slideIn(positionId) {
         slide_web.href = "#blockC";
         slide_intro.href = "#blockC";
 
+        var imgBlock = document.querySelector('#slideTitleImg');
+        imgBlock.src = '#';
     }
     fetch('./get_info', {
             method: 'post',
@@ -78,7 +80,18 @@ function slideIn(positionId) {
         })
 
 
+    fetch('./getStoreTitleImg', {
+            method: 'post',
+            body: positionId,
+        })
+        .then(response => {
+            return response.text();
+        })
+        .then(text => {
+            var imgBlock = document.querySelector('#slideTitleImg');
+            imgBlock.src = text;
 
+        })
     var fixedBlock = document.querySelector('.fixedBlock');
     fixedBlock.style.width = "70%";
     var slideBlock = document.querySelector('.slideBlock');

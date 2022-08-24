@@ -1,3 +1,4 @@
+from unittest import result
 from flask import *
 from werkzeug.utils import *
 import flask_login
@@ -105,6 +106,14 @@ def getPost(path):
         return redirect('/',code=302)
 
 
+@app.route('/getStoreTitleImg',methods=['GET','POST'])
+def getStoreTitleImg():
+    html_id = request.get_data()
+    db = peachDB()
+    result_img = db.getPost((html_id).decode('ascii'))
+    db.close_sql()
+    result_img = result_img[6]
+    return result_img
 
 
 if __name__ == "__main__":
