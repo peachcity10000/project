@@ -25,25 +25,25 @@ def test_sql():
         db.commit()
     
     # Test selecting the "account" table
-    c.execute("SELECT * FROM account where account_id = 'david0970';")
+    c.execute("SELECT * FROM account;")
     db.commit()
     for row in c:
         print(row)
 
     # Test selecting the "post" table
-    c.execute("SELECT * FROM post where post_title = '國立嘉義大學';")
+    c.execute("SELECT * FROM post;")
     db.commit()
     for row in c:
         print(row)
 
     # Test selecting the "store" table
-    c.execute("SELECT * FROM store where store_name = '小口品S';")
+    c.execute("SELECT * FROM store ;")
     db.commit()
     for row in c:
         print(row)
     
     # Test selecting the "img" table
-    c.execute("SELECT * FROM img where store_id = 1;")
+    c.execute("SELECT * FROM img ;")
     db.commit()
     for row in c:
         print(row)
@@ -75,24 +75,6 @@ def delete_sql():
 
 create_sql()
 test_sql()
-delete_sql()
-create_sql()
+# delete_sql()
+# create_sql()
 print("test successfully")
-
-
-# command = """
-# INSERT INTO 
-#     store(store_name, store_html_id, store_date, store_tel, store_web)
-# values
-#     (
-#         "小口品S",
-#         "g16913-26-3-51-5-18-54-70-6-4-2",
-#         '1659268899.2852724',
-#         '0912345678',
-#         'https://www.facebook.com/xiaokoupin/'
-#     );
-#     """
-# db = sqlite3.connect('peachCity.db')
-# c = db.cursor()
-# c.execute(command)
-# c.close()

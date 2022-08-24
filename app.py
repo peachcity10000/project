@@ -79,6 +79,24 @@ def query_info():
     else:
         return '{"error":"error"}'
 
+@app.route('/post/<path:path>')
+def getPost(path):
+    try:
+        # get db item
+        db = peachDB()
+        if(type(path) != str):
+            path =(path).decode('ascii')
+        result_context = db.getPost(path)
+        result_img = db.getImgur(path)
+        db.close_sql()
+
+        # return the results
+        result_string_list = result_context[3].split('\n')
+        return render_template('post.html', title = result_context[2], context = result_string_list, result_img = result_img[2])
+    except Exception as ex:
+        print(ex)
+        return redirect('/',code=302)
+
 
 
 

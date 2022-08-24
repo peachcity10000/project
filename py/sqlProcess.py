@@ -1,6 +1,8 @@
 import sqlite3
 import time
 
+from click import command
+
 class user:
     def __init__(self) -> None:
         self.userName = ''
@@ -137,4 +139,37 @@ class peachDB:
         row = list(self.cursor.fetchall())
         return row[0]
 
+    def getPost(self, html_id:str):
+        verification_code  = html_id.split('-')[0]
+        if (verification_code!= 'g16913'):
+            return "error"
+        
+        command = f'SELECT * from post where post_store_id = "{html_id}";'
+        if (self.connected ==False):
+            self.connection()
+        self.cursor.execute(command)
+        self.db_conn.commit()
+        row = list(self.cursor.fetchall())
+        return row[0]
 
+    def getAllPost(self ):
+        command = f'SELECT * from post'
+        if (self.connected ==False):
+            self.connection()
+        self.cursor.execute(command)
+        self.db_conn.commit()
+        row = list(self.cursor.fetchall())
+        return row
+
+    def getImgur(self, html_id:str):
+        verification_code  = html_id.split('-')[0]
+        if (verification_code!= 'g16913'):
+            return "error"
+        
+        command = f'SELECT * from img where store_id = "{html_id}";'
+        if (self.connected ==False):
+            self.connection()
+        self.cursor.execute(command)
+        self.db_conn.commit()
+        row = list(self.cursor.fetchall())
+        return row[0]

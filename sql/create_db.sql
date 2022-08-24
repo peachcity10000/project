@@ -11,12 +11,15 @@ CREATE TABLE store(
     store_html_id TEXT NOT NULL,
     store_date REAL NOT NULL,
     store_tel TEXT,
-    store_web TEXT
+    store_web TEXT,
+    store_addr TEXT,
+    store_open_time TEXT,
+    title_img_addr TEXT
 );
 
 CREATE TABLE post(
     id INTEGER PRIMARY KEY ASC AUTOINCREMENT,
-    post_store INTEGER NOT NULL,
+    post_store_id TEXT NOT NULL,
     post_title TEXT NOT NULL,
     post_context TEXT NOt NULL,
     post_author_id TEXT NOT NULL,
@@ -25,12 +28,12 @@ CREATE TABLE post(
 
 CREATE TABLE img(
     id INTEGER PRIMARY KEY ASC AUTOINCREMENT,
-    store_id INTEGER NOT NULL,
+    store_id TEXT NOT NULL,
     img_addr TEXT NOT NULL
 );
 
 CREATE TABLE postcast(
     id INTEGER PRIMARY KEY ASC AUTOINCREMENT,
-    store_id INTEGER,
+    store_id TEXT,
     post_addr TEXT NOT NULL
 )
