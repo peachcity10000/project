@@ -101,6 +101,11 @@
     text-decoration: underline;
 }
 
+.infoBlock>#slideIntro {
+    text-align: right;
+    padding: 10px;
+}
+
 
 /* 地圖按鈕部分 */
 

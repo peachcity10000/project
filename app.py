@@ -73,7 +73,10 @@ def query_info():
         text = f'''
             "store_name" : "{result[1]}",
             "store_phone" : "{result[4]}",
-            "store_web" : "{result[5]}"
+            "store_web" : "{result[5]}",
+            "store_addr" : "{result[6]}",
+            "store_time" : "{result[7]}"
+            
         '''
         return "{" + text + "}"
     else:

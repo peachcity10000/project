@@ -73,7 +73,7 @@ def delete_sql():
 
 
 
-create_sql()
+# create_sql()
 test_sql()
 # delete_sql()
 # create_sql()

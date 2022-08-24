@@ -35,9 +35,17 @@ function slideIn(positionId) {
         var slide_title = document.querySelector('.sildeTitle');
         var slide_phone = document.querySelector('#slidePhone');
         var slide_web = document.querySelector('#slideWeb');
+        var slide_addr = document.querySelector('#slideAddr');
+        var slide_time = document.querySelector('#slideTime');
+        var slide_intro = document.querySelector("#slideIntro");
         slide_title.textContent = "尚未收錄";
         slide_phone.textContent = "尚未收錄";
         slide_web.textContent = "尚未收錄";
+        slide_addr.textContent = "尚未收錄";
+        slide_time.textContent = "尚未收錄";
+        slide_web.href = "#blockC";
+        slide_intro.href = "#blockC";
+
     }
     fetch('./get_info', {
             method: 'post',
@@ -52,13 +60,25 @@ function slideIn(positionId) {
                 var slide_title = document.querySelector('.sildeTitle');
                 var slide_phone = document.querySelector('#slidePhone');
                 var slide_web = document.querySelector('#slideWeb');
+                var slide_addr = document.querySelector('#slideAddr');
+                var slide_time = document.querySelector('#slideTime');
+                var slide_intro = document.querySelector("#slideIntro");
+
                 if (key == 'store_name') slide_title.textContent = value;
                 if (key == 'store_phone') slide_phone.textContent = value;
-                if (key == 'store_web') slide_web.textContent = value;
-
+                if (key == 'store_time') slide_time.textContent = value;
+                if (key == 'store_addr') slide_addr.textContent = value;
+                if (key == 'store_web') {
+                    slide_web.textContent = value;
+                    slide_web.href = value;
+                }
+                slide_intro.href = "".concat("/post/", positionId);
             })
             return json
         })
+
+
+
     var fixedBlock = document.querySelector('.fixedBlock');
     fixedBlock.style.width = "70%";
     var slideBlock = document.querySelector('.slideBlock');
