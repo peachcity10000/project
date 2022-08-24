@@ -20,7 +20,10 @@ def allowed_file(filename):
 
 @app.route("/")
 def index():
-    return render_template('index.html')
+    db = peachDB()
+    result = db.getAllPost()
+    db.close_sql()
+    return render_template('index.html',result=result)
 
 
 @app.route("/Map")
@@ -30,6 +33,7 @@ def map():
     
 @app.route("/test")
 def test():
+    
     return render_template('test.html')
 
 @app.route("/upload",methods=['GET','POST'])

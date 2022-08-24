@@ -131,51 +131,24 @@
             <p>Cafe</p>
         </div>
         <div class="content_list">
-            <div class="item row">
+
+            {%for index in result%}
+            <a class="item row" href="/post/{{index[1]}}">
                 <div class="col-3 content_img">
                     <img src="{{url_for('static',filename='img/title.jpg')}}" alt="">
                 </div>
                 <div class="col-9 content_context">
-                    <div class="content_title">小口品</div>
-                    <div class="content_text">夜幕低垂的文化路和民生路，一邊充斥著林聰明與夜市的喧囂，一邊閃爍精品與服飾的奢華。光彩街聯者其二...</div>
+                    <div class="content_title">{{index[2]}}</div>
+                    <div class="content_text">{{index[3]}}</div>
                 </div>
-            </div>
-            <div class="item row">
-                <div class="col-3 content_img">
-                    <img src="{{url_for('static',filename='img/title.jpg')}}" alt="">
-                </div>
-                <div class="col-9 content_context">
-                    <div class="content_title">小口品</div>
-                    <div class="content_text">夜幕低垂的文化路和民生路，一邊充斥著林聰明與夜市的喧囂，一邊閃爍精品與服飾的奢華。光彩街聯者其二...</div>
-                </div>
-            </div>
-            <div class="item row">
-                <div class="col-3 content_img">
-                    <img src="{{url_for('static',filename='img/title.jpg')}}" alt="">
-                </div>
-                <div class="col-9 content_context">
-                    <div class="content_title">小口品</div>
-                    <div class="content_text">夜幕低垂的文化路和民生路，一邊充斥著林聰明與夜市的喧囂，一邊閃爍精品與服飾的奢華。光彩街聯者其二...</div>
-                </div>
-            </div>
-            <div class="item row">
-                <div class="col-3 content_img">
-                    <img src="{{url_for('static',filename='img/title.jpg')}}" alt="">
-                </div>
-                <div class="col-9 content_context">
-                    <div class="content_title">小口品</div>
-                    <div class="content_text">夜幕低垂的文化路和民生路，一邊充斥著林聰明與夜市的喧囂，一邊閃爍精品與服飾的奢華。光彩街聯者其二...</div>
-                </div>
-            </div>
-            <div class="item row">
-                <div class="col-3 content_img">
-                    <img src="{{url_for('static',filename='img/title.jpg')}}" alt="">
-                </div>
-                <div class="col-9 content_context">
-                    <div class="content_title">小口品</div>
-                    <div class="content_text">夜幕低垂的文化路和民生路，一邊充斥著林聰明與夜市的喧囂，一邊閃爍精品與服飾的奢華。光彩街聯者其二...</div>
-                </div>
-            </div>
+            </a>
+
+            {%endfor%}
+
+
+
+
+
         </div>
     </div>
 
@@ -198,4 +171,5 @@
         </form>
     </div>
     {%endblock%}
+
 </main>

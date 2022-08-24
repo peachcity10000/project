@@ -158,6 +158,7 @@
     height: 152px !important;
     width: 100%;
     margin: 0;
+    text-decoration: none;
 }
 
 #blockCafe>.content_list .content_img {
@@ -189,6 +190,10 @@
 #blockCafe>.content_list .content_text {
     font-size: 0.9rem;
     color: rgba(100, 50, 0, 1);
+    white-space: nowrap;
+    overflow-x: hidden;
+    max-height: 30px;
+    width: 60vw;
 }
 
 #blockCafe>.content_list::-webkit-scrollbar-track {
