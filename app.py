@@ -92,7 +92,7 @@ def getPost(path):
 
         # return the results
         result_string_list = result_context[3].split('\n')
-        return render_template('post.html', title = result_context[2], context = result_string_list, result_img = result_img[2])
+        return render_template('post.html', title = result_context[2], context = result_string_list, result_img = result_img[2],titleImg = result_context[6])
     except Exception as ex:
         print(ex)
         return redirect('/',code=302)

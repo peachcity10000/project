@@ -22,7 +22,7 @@ values
     );
     
 INSERT INTO
-    post (post_store_id, post_title, post_context, post_author_id, post_date)
+    post (post_store_id, post_title, post_context, post_author_id, post_date, post_title_img)
 values
     (
         'g16913-26-3-51-5-18-54-70-6-4-2',
@@ -38,7 +38,8 @@ values
 從2014年到現在已經快要八年了。那時的阿闕還沒有從大學畢業就開始了擺攤，到了2017年才有現在位於光彩街的小口品3.0。時間的累積沒有讓他們自負，而是選擇以溫度來面對店裡的每一個人，每次相遇，都讓心被純粹的兩人治癒，。【座位雖少，咖啡極好】期望大家到訪，都能發現小口品s更多的美好。
 ',
         'david0970',
-        '1659268899.2852724'
+        '1659268899.2852724',
+        'https://imgur.com/XGyqfOL.jpg'
     );
 
 

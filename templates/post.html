@@ -52,7 +52,7 @@
     <main>
         <div class="container">
             <div class="photoBlock">
-                <img src="https://imgur.com/XGyqfOL.jpg" alt="titleImg" srcset="">
+                <img src="{{titleImg}}" alt="titleImg" srcset="">
             </div>
             <div class="titleBlock">
                 <p id='title'>{{title}}</p>
@@ -62,6 +62,11 @@
             {%for line in context%}
             <p id="context">{{line}}</p>
             {%endfor%}
+
+            <div id="imgBlock">
+                <blockquote class="imgur-embed-pub" lang="en" data-id="a/{{result_img}}"><a href="//imgur.com/a/{{result_img}}">小口品S</a></blockquote>
+                <script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+            </div>
         </div>
 
 

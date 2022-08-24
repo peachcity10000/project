@@ -13,8 +13,7 @@ CREATE TABLE store(
     store_tel TEXT,
     store_web TEXT,
     store_addr TEXT,
-    store_open_time TEXT,
-    title_img_addr TEXT
+    store_open_time TEXT
 );
 
 CREATE TABLE post(
@@ -23,7 +22,8 @@ CREATE TABLE post(
     post_title TEXT NOT NULL,
     post_context TEXT NOt NULL,
     post_author_id TEXT NOT NULL,
-    post_date REAL NOT NULL
+    post_date REAL NOT NULL,
+    post_title_img TEXT NOT NULL
 );
 
 CREATE TABLE img(
