@@ -1,0 +1,165 @@
+/* 外框部分 */
+
+#blockC {
+    padding: 5px;
+    margin: 0;
+    height: 100vh;
+    background-color: rgba(239, 222, 200, 1);
+    border: rgba(134, 90, 58, 1);
+    border-width: 1px;
+    border-style: solid;
+}
+
+#blockC_inner {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-color: rgba(239, 222, 200, 1);
+    border: rgba(134, 90, 58, 1);
+    border-width: 3px;
+    border-style: solid;
+}
+
+
+/* 地圖部分 */
+
+.fixedBlock {
+    width: 100%;
+    height: 100%;
+    float: left;
+    transition: 1s;
+}
+
+.content>.mapp {
+    background-color: rgba(239, 222, 200, 1);
+    max-height: 95vh;
+    overflow: scroll;
+}
+
+.svg5 {
+    overflow: scroll;
+    display: inline-block;
+    zoom: 130%;
+}
+
+
+/* 滑動視窗部分 */
+
+.slideBlock {
+    width: 0%;
+    height: 100%;
+    background-color: rgba(239, 222, 200, 1);
+    float: right;
+    border: rgba(134, 90, 58, 1);
+    border-width: 1px;
+    border-left-style: solid;
+    transition: 1s;
+    overflow-y: auto;
+}
+
+#closeButton {
+    text-align: right;
+    padding: 5px 15px 0 0;
+}
+
+.sildeTitle {
+    text-align: center;
+    font-size: 30px;
+}
+
+#slideTitleImg {
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+}
+
+.imgBlock {
+    /* height: 45vh; */
+    overflow-y: auto;
+    background-color: rgb(173, 204, 62);
+    margin: 0 5px 0 5px;
+}
+
+.infoBlock {
+    overflow-y: auto;
+    max-height: 40vh;
+    margin: 10px 5px 0 5px;
+}
+
+.infoBlock>.slideContent {
+    margin: 0;
+}
+
+.infoBlock>.slideSubtitle {
+    margin: 0;
+}
+
+.infoBlock>hr {
+    padding: 0 10px 0 10px;
+    margin: 0px 0 10px 0;
+}
+
+.infoBlock>.sildeTitle {
+    text-decoration: none;
+}
+
+.infoBlock>.sildeTitle:hover {
+    text-decoration: underline;
+}
+
+.infoBlock>#slideIntro {
+    text-align: right;
+    padding: 10px;
+}
+
+
+/* 地圖按鈕部分 */
+
+#submition {
+    position: absolute;
+    padding: 10px 0 0 10px;
+    height: 3vh;
+    padding: 0;
+}
+
+#submition input {
+    background-color: #F8F3E8;
+    border: 1px 1px 1px 0;
+    border-radius: 0 2px 2px 0;
+}
+
+#submition img {
+    height: 100%;
+}
+
+#resize {
+    position: absolute;
+    margin: 60px 0 0 10px;
+    width: 5vh;
+    height: 13vh;
+    border: solid 2px rgba(178, 137, 95, 1);
+    border-radius: 10px;
+}
+
+#resize .zoom_in {
+    padding: 0;
+    width: 100%;
+    height: 50%;
+    border: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#resize hr {
+    padding: 0;
+    margin: 0;
+}
+
+#resize .zoom_out {
+    padding: 0;
+    width: 100%;
+    height: 50%;
+    border: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}

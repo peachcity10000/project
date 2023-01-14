@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>桃城万事屋</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap 5 css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- bootstrap 5 javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/post.css')}}">
+
+    <!-- javascript -->
+    <script src="{{ url_for('static', filename='js/nav.js')}}"></script>
+
+    <!-- favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='img/title.jpg')}}">
+
+</head>
+
+<body style=" background-color: #F5F5F5;">
+    <nav class="navbar sticky-top navbar-expand-lg nav_style">
+        <div class="container-fluid">
+            <img src="{{ url_for('static', filename='img/title.jpg')}}" style="max-height: 40px; padding-right: 24px;" alt="">
+            <a class="navbar-brand nav_title" id="nav_title" href="/">桃 城 万 事 屋</a>
+            <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <nav class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item nav_items">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="photoBlock">
+                <img src="{{titleImg}}" alt="titleImg" srcset="">
+            </div>
+            <div class="titleBlock">
+                <p id='title'>{{title}}</p>
+            </div>
+
+
+            {%for line in context%}
+            <p id="context">{{line}}</p>
+            {%endfor%}
+
+            <div id="imgBlock">
+                <blockquote class="imgur-embed-pub" lang="en" data-id="a/{{result_img}}"><a href="//imgur.com/a/{{result_img}}">小口品S</a></blockquote>
+                <script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+            </div>
+        </div>
+
+
+    </main>
+
+
+</body>
+
+</html>

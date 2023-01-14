@@ -1,0 +1,35 @@
+/* font setting */
+
+:root {
+    --threshold: 0.5;
+}
+
+@font-face {
+    font-family: 'Noto Sans TC';
+    src: url(/font/SourceHanSerifTC-Bold.otf);
+}
+
+.show {
+    background-color: #F5F5F5;
+}
+
+.nav_style {
+    color: #643200;
+    background-color: transparent;
+}
+
+.nav_title {
+    font-family: 'Noto Sans TC';
+    color: #643200;
+    mix-blend-mode: color-dodge;
+}
+
+.nav_items {
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #643200;
+}
+
+.nav_items a {
+    color: #643200;
+}

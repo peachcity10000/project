@@ -1,0 +1,32 @@
+- jinja reference : https://wsgzao.github.io/post/jinja/
+- flask reference : https://ithelp.ithome.com.tw/articles/10258223
+- flask templates reference : https://ithelp.ithome.com.tw/articles/10223125
+- table format : https://ithelp.ithome.com.tw/articles/10195257
+- table css : https://cyublog.com/articles/css-zh/html-table-css/
+- img onclick : https://www.delftstack.com/zh-tw/howto/javascript/html-image-onclick/
+- javascript innerHTML : https://hsuchihting.github.io/javascript/20200630/2965249736/
+- 圖片置中 : https://dotblogs.com.tw/Frank_Information_Workstation/2016/04/08/134514
+- <map> : https://www.webtech.tw/info.php?tid=HTML_Image_Map_%E5%BD%B1%E5%83%8F%E5%9C%B0%E5%9C%96%E8%A8%AD%E8%A8%88#
+- <map>2 : https://spicyboyd.github.io/TainanGourmetPlaza/map.html
+- <map>3 : https://spicyboyd.blogspot.com/2018/06/web-html-map-tag.html
+- 調整圖片大小 : https://blog.csdn.net/hbiao68/article/details/103818509
+- ImageMapster : https://github.com/jamietre/ImageMapster
+- ImageMapster : http://www.outsharked.com/imagemapster/
+- JQuery : https://releases.jquery.com/
+- HTML 超連結瀏覽器開啟新分頁 : https://kanchengzxdfgcv.blogspot.com/2019/03/html-targetblank.html
+- html css 基礎版面架構 : https://ithelp.ithome.com.tw/articles/10193318
+- 使用 JavaScript 獲取螢幕、視窗和網頁大小 : https://www.delftstack.com/zh-tw/howto/javascript/javascript-get-screen-size/
+- overflow的處理方式 : https://cabuchi.pixnet.net/blog/post/37503134-%5Bcss%5D%E8%A3%81%E5%88%87%E5%9C%96%E7%89%87-%E5%88%A9%E7%94%A8overflow%E6%88%96clip%3Arect
+- jQuery resize不斷取得瀏覽器$(window).width()寬度 : https://ucamc.com/articles/132-jquery-resize-windows-width
+- How To Make Clickable SVG Map HTML & CSS : https://youtu.be/6C-GYwxdZd4
+- Cannot read property 'addEventListener' of null : https://stackoverflow.com/questions/26107125/cannot-read-property-addeventlistener-of-null
+- scroll and zoom svg view : https://codepen.io/mrobin604/pen/yjmrjj 
+- sqlite 介紹 1 : https://medium.com/pyladies-taiwan/%E5%A6%82%E4%BD%95%E5%9C%A8-flask-%E4%BD%BF%E7%94%A8-sqlite-%E8%B3%87%E6%96%99%E5%BA%AB-c26f300f1d87
+- sqlite 介紹 2 : https://blog.liang2.tw/posts/2015/09/flask-draw-member/
+- sqlite 資料類型 : https://www.runoob.com/sqlite/sqlite-data-types.html
+- sqlite 錯誤 : https://blog.csdn.net/www121104115/article/details/75051685
+- upload file 1 : https://www.tw511.com/5/56/1745.html
+- upload file 2 : https://medium.com/@charming_rust_oyster_221/flask-%E6%AA%94%E6%A1%88%E4%B8%8A%E5%82%B3%E5%88%B0%E4%BC%BA%E6%9C%8D%E5%99%A8%E7%9A%84%E6%96%B9%E6%B3%95-1-c11097c23137
+- upload to imgur : https://www.letswrite.tw/imgur-api-upload-load/
+- bootstrap 轮播图显示多张图片 : https://blog.csdn.net/qq_39313596/article/details/81136470
+- css 文字超過不換行 : https://www.puritys.me/docs-blog/article-31-CSS-%E8%AA%9E%E6%B3%95%EF%BC%8C%E6%96%87%E5%AD%97%E6%8F%9B%E8%A1%8C%EF%BC%8C%E5%BC%B7%E8%BF%AB%E4%B8%8D%E6%8F%9B%E8%A1%8C%E3%80%82.html

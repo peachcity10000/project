@@ -1,0 +1,41 @@
+{% extends "nav_2.html" %} {% block title %}桃城万事屋{% endblock %}
+
+<main>
+    {%block main%}
+    <div class="container">
+        <div class="row justify-content-center ">
+            <div class="col-lg-6 g-3" style="text-align: center;">
+                <div class="card shadow-lg">
+                    <h5 class="card-header">Please Login</h5>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="login" placeholder="account">
+                                <label for="login">account</label>
+                            </div>
+                            <p></p>
+                            <div class="form-floating">
+                                <input type="password" class="form-control" id="password" placeholder="Password">
+                                <label for="password">Password</label>
+                            </div>
+                            <p></p>
+                            <button class="w-100 btn btn-lg btn-primary" style="background-color: #643200; border-color: #643200;" type="submit">Sign in</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar fixed-bottom">
+        <div class="container-fluid">
+            <p> Copyright &copy; 2022-
+                <script>
+                    document.write(new Date().getFullYear())
+                </script> All Rights Reserved
+            </p>
+        </div>
+    </nav>
+
+    {%endblock%}
+</main>
