@@ -1,12 +1,11 @@
--- insert
--- INSERT INTO
---     account(account_id, account_name, account_password)
--- values
---     (
---         'david0970',
---         '陳冠宇',
---         'apple1234'
---     );
+INSERT INTO
+    account(account_id, account_name, account_password)
+values
+    (
+        'david0970',
+        '陳冠宇',
+        'apple1234'
+    );
 
 INSERT INTO 
     store(store_name, store_html_id, store_date, store_tel, store_web, store_addr, store_open_time)

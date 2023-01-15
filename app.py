@@ -1,9 +1,11 @@
-from unittest import result
 from flask import *
 from werkzeug.utils import *
 import os
 from py.sqlProcess import *
-
+from flask_login import (current_user, LoginManager,
+                             login_user, logout_user,
+                             login_required)
+                             
 UPLOAD_FOLDER = './static/temp/'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 
@@ -11,12 +13,17 @@ ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  
-
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = 'login'
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
 
 
+@login_manager.user_loader
+def load_user(id):
+    return User.get(id)
 
 @app.route("/")
 def index():
@@ -46,9 +53,30 @@ def upload_img():
             return redirect(url_for('static', filename= 'temp/' + file.filename))
     return "error"
 
-@app.route("/Login")
-def login():
+@app.route("/Login", methods=['GET'])
+def loginPage():
     return render_template('login.html')
+
+@app.route("/Login", methods=["POST"])
+def login():
+    username = request.form['account']
+    password = request.form['password']
+    user = User()
+    status = user.checkPassword(password, username)
+
+    if(status == True):
+        login_user(user)
+        return render_template('controlPanel.html')
+    else:
+        return jsonify({
+            "status":401,
+            "reason":"Username or Password Error."
+        })
+
+@app.route('/logout', methods=['GET'])
+def logout():
+    logout_user()
+    return redirect(url_for('login'))
 
 @app.route("/font/<path:path>")
 def ttf(path):
@@ -115,9 +143,14 @@ def getStoreTitleImg():
     return result_img
 
 @app.route('/ControlPanel')
+@login_required
 def controlPanel():
     return render_template('controlPanel.html')
+
 if __name__ == "__main__":
+    app.secret_key = 'super secret key'
+    app.config['SESSION_TYPE'] = 'filesystem'
+
     port = int(os.environ.get('PORT', 80))
     app.debug = True
     app.run(host='0.0.0.0', port=port)

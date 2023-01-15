@@ -1,15 +1,56 @@
+from operator import truediv
 import sqlite3
 import time
 
-from click import command
-
-class user:
-    def __init__(self) -> None:
+# checkPassword
+class User:
+    def __init__(self):
         self.userName = ''
+        self.password = ''
+        self.id=''
 
     def setUserName(self, username:str):
         self.userName = username
+        self.id = username
 
+    def to_json(self):
+        return {"userName": self.userName}
+    
+    def is_authenticated(self):
+        return True
+
+    def is_active(self):   
+        return True           
+
+    def is_anonymous(self):
+        return False          
+
+    def get_id(self):      
+        try:
+            return str(self.id)
+        except AttributeError:
+            raise NotImplementedError("No `id` attribute - override `get_id`") from None
+   
+    def get(id):
+        db = peachDB()
+        status = db.is_user_valid(userName=id)
+        if(status == True):
+            return 
+        else:
+            return None
+
+    def checkPassword(self, password, userName):
+        db = peachDB()
+        status = db.is_user_valid(userName=userName)
+        if(status ==True):
+            self.userName = userName
+            self.id = userName
+            return db.is_password_correct(userName=userName, password=password)
+        else:
+            return False
+            
+
+        
 
 
 class post:
@@ -61,7 +102,7 @@ class post:
         except:
             return -1
 
-    def setAuthor(self , user:user):
+    def setAuthor(self , user:User):
         try:
             self.author_id = user.userName
             return 0 
@@ -173,3 +214,30 @@ class peachDB:
         self.db_conn.commit()
         row = list(self.cursor.fetchall())
         return row[0]
+
+    def is_user_valid(self, userName):
+        command = f"SELECT * from account where account_id = '{userName}';"
+        if (self.connected ==False):
+            self.connection()
+        self.cursor.execute(command)
+        self.db_conn.commit()
+        row = list(self.cursor.fetchall())
+        self.close_sql()
+        if(len(row)>0):
+            return True
+        else:
+            return False
+
+    def is_password_correct(self, userName, password):
+        command = f"SELECT * from account where account_id = '{userName}';"
+        if (self.connected ==False):
+            self.connection()
+        self.cursor.execute(command)
+        self.db_conn.commit()
+        row = list(self.cursor.fetchall())
+        self.close_sql()
+
+        if(row[0][3]==password):
+            return True
+        else:
+            return False

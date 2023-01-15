@@ -6,26 +6,27 @@
         <div class="row justify-content-center ">
             <div class="col-lg-6 g-3" style="text-align: center;">
                 <div class="card shadow-lg">
-                    <h5 class="card-header">Please Login</h5>
+                    <h5 class="card-header" style="color:#643200">Please Login</h5>
                     <div class="card-body">
-                        <form>
+                        <form method="post" action="/Login">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="login" placeholder="account">
-                                <label for="login">account</label>
+                                <input type="text" class="form-control" name="account" id="account" placeholder="account" required>
+                                <label for="account">Account</label>
                             </div>
                             <p></p>
                             <div class="form-floating">
-                                <input type="password" class="form-control" id="password" placeholder="Password">
+                                <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
                                 <label for="password">Password</label>
                             </div>
                             <p></p>
                             <button class="w-100 btn btn-lg btn-primary" style="background-color: #643200; border-color: #643200;" type="submit">Sign in</button>
-
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+
+
     </div>
     <nav class="navbar fixed-bottom">
         <div class="container-fluid">

@@ -24,36 +24,41 @@ def test_sql():
         c.executescript(test_db_sql)
         db.commit()
     
+    # # Test selecting the "account" table
+    # c.execute("SELECT * FROM account;")
+    # db.commit()
+    # for row in c:
+    #     print(row)
+
+    # # Test selecting the "post" table
+    # c.execute("SELECT * FROM post;")
+    # db.commit()
+    # for row in c:
+    #     print(row)
+
+    # # Test selecting the "store" table
+    # c.execute("SELECT * FROM store ;")
+    # db.commit()
+    # for row in c:
+    #     print(row)
+    
+    # # Test selecting the "img" table
+    # c.execute("SELECT * FROM img ;")
+    # db.commit()
+    # for row in c:
+    #     print(row)
+
+    # # Test selecting the "postcast" table
+    # c.execute("SELECT * FROM postcast where store_id = 1;")
+    # db.commit()
+    # for row in c:
+    #     print(row)
+    
     # Test selecting the "account" table
-    c.execute("SELECT * FROM account;")
+    c.execute("SELECT * FROM account where account_id ='david0970' ;")
     db.commit()
     for row in c:
         print(row)
-
-    # Test selecting the "post" table
-    c.execute("SELECT * FROM post;")
-    db.commit()
-    for row in c:
-        print(row)
-
-    # Test selecting the "store" table
-    c.execute("SELECT * FROM store ;")
-    db.commit()
-    for row in c:
-        print(row)
-    
-    # Test selecting the "img" table
-    c.execute("SELECT * FROM img ;")
-    db.commit()
-    for row in c:
-        print(row)
-
-    # Test selecting the "postcast" table
-    c.execute("SELECT * FROM postcast where store_id = 1;")
-    db.commit()
-    for row in c:
-        print(row)
-    
 
     
 def delete_sql():
