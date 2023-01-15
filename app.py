@@ -1,7 +1,6 @@
 from unittest import result
 from flask import *
 from werkzeug.utils import *
-import flask_login
 import os
 from py.sqlProcess import *
 
