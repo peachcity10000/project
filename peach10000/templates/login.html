@@ -1,7 +1,25 @@
 {% extends "nav_2.html" %} {% block title %}桃城万事屋{% endblock %}
 
-<main>
+<main style="background-color:#EFDEC8">
     {%block main%}
+
+    <div class="container-fuild">
+
+        <div class="alert alert-warning alert-dismissible fade show kkobject" role="alert">
+            <strong>系統資訊:</strong> {{message}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+    </div>
+
+    <script>
+        window.setTimeout(Timefunction, 2000);
+
+        function Timefunction() {
+            document.getElementsByClassName("kkobject").display = "";
+        }
+    </script>
+
     <div class="container">
         <div class="row justify-content-center ">
             <div class="col-lg-6 g-3" style="text-align: center;">
